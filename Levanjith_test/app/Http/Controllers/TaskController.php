@@ -33,6 +33,15 @@ public function addAvailable(Request $request){
 //     'fname' => 'required'
 // ]);
 
+$rules = [
+  'fname' => 'required'
+];
+$validator = Validator::make($request->all(), $rules);
+if ($validator->fails()) {
+  $data['sucess'] = "Successfully your Password reset";
+  return redirect()->back()->with('alert', 'Data cant Updated!');
+  // return view('home');
+}    
 // // $member = new  \App\member();
 // // $member ->fname = $request('fname');
 // // $member ->save();

@@ -18,6 +18,7 @@ class CreateMembersTable extends Migration
             $table->string('fname');
             $table->string('lname');
             $table->string('divition');
+            $table->string('image');
             $table->string('dob');
             $table->string('summery');
             $table->integer('member_status_id')->unsigned();

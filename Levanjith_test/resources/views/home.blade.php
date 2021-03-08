@@ -14,7 +14,11 @@
     <div class="row">
     <div class="col-md-6">
       <div class="form-group">
+      
         <label for="last_name">First name</label>
+        <?php if (isset($sucess)) { ?>
+            <span id='message' style="color: green;"><?php echo $sucess; ?></span><br><br>
+        <?php   } ?>
         <input id="fname" class="form-control input-cl"  type="text" name="fname" value="">
       </div>
     </div>
